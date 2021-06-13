@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
-using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace CurrencyConversor
 {
     public partial class Form1 : Form
     {
 
-        string json;
+        dynamic json;
 
         public Form1()
         {
@@ -24,8 +24,15 @@ namespace CurrencyConversor
             {
                 string access_key = Properties.Settings.Default.access_key;
                 string url = "http://data.fixer.io/api/latest?access_key=";
-                Object Jose = new Object();
-                json = wc.DownloadString($"{url}{access_key}");
+                try
+                {
+                    string jsonNotParsed = wc.DownloadString($"{url}{access_key}");
+                    json = JObject.Parse(jsonNotParsed);
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("An error happened while trying to fetch the latest currency values, try again later or try to contact us." + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
                 Console.WriteLine(json);
             }
         }
@@ -44,16 +51,22 @@ namespace CurrencyConversor
 
             try
             {
-                //fromValue = json.rates.from;
-                //toValue = json.rates.to;
+                Console.WriteLine(from + "" + to);
+                fromValue = json.rates[from];
+                toValue = json.rates[to];
                 amount = Convert.ToDouble(txtValue.Text);
+
+
+                double final = (1 / fromValue) * toValue * amount;
+                Console.WriteLine($"From: {fromValue} | To: {toValue} | final {final}");
+
             } catch (Exception ex)
             {
                 MessageBox.Show("An invalid amount or currency symbol was given. Check them and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+
             
-            
-            Console.WriteLine(amount);
             
 
 

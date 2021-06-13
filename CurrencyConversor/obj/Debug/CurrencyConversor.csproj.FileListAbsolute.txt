@@ -8,3 +8,6 @@ F:\Visual Studio (c-sharp) projects\CurrencyConversor\CurrencyConversor\obj\Debu
 F:\Visual Studio (c-sharp) projects\CurrencyConversor\CurrencyConversor\obj\Debug\CurrencyConversor.csproj.CoreCompileInputs.cache
 F:\Visual Studio (c-sharp) projects\CurrencyConversor\CurrencyConversor\obj\Debug\CurrencyConversor.exe
 F:\Visual Studio (c-sharp) projects\CurrencyConversor\CurrencyConversor\obj\Debug\CurrencyConversor.pdb
+F:\Visual Studio (c-sharp) projects\CurrencyConversor\CurrencyConversor\bin\Debug\Newtonsoft.Json.dll
+F:\Visual Studio (c-sharp) projects\CurrencyConversor\CurrencyConversor\bin\Debug\Newtonsoft.Json.xml
+F:\Visual Studio (c-sharp) projects\CurrencyConversor\CurrencyConversor\obj\Debug\CurrencyConversor.csproj.CopyComplete
