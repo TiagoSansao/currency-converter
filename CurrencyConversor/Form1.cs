@@ -36,10 +36,20 @@ namespace CurrencyConversor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double amount = Convert.ToDouble(txtValue.Text);
             string from = cmbFrom.Text;
             string to = cmbTo.Text;
+            double amount = 0;
 
+            try
+            {
+                amount = Convert.ToDouble(txtValue.Text);
+            } catch (Exception ex)
+            {
+                MessageBox.Show("An invalid amount was given.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
+            
+            Console.WriteLine(amount);
             
 
 
