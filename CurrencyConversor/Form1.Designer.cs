@@ -37,7 +37,7 @@ namespace CurrencyConversor
             this.button1 = new System.Windows.Forms.Button();
             this.txtValue = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -452,22 +452,22 @@ namespace CurrencyConversor
             this.label4.TabIndex = 7;
             this.label4.Text = "AMOUNT:";
             // 
-            // label5
+            // labelResult
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(39, 256);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 22);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "RESULT";
+            this.labelResult.AutoSize = true;
+            this.labelResult.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResult.Location = new System.Drawing.Point(39, 256);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(93, 22);
+            this.labelResult.TabIndex = 8;
+            this.labelResult.Text = "RESULT: ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 342);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(446, 320);
+            this.Controls.Add(this.labelResult);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtValue);
             this.Controls.Add(this.button1);
@@ -494,7 +494,7 @@ namespace CurrencyConversor
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtValue;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelResult;
     }
 }
 

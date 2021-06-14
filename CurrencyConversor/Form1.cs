@@ -59,6 +59,7 @@ namespace CurrencyConversor
 
                 double final = (1 / fromValue) * toValue * amount;
                 Console.WriteLine($"From: {fromValue} | To: {toValue} | final {final}");
+                labelResult.Text = $"RESULT: {amount} {from} = {Math.Round(final, 2)} {to}";
 
             } catch (Exception ex)
             {
